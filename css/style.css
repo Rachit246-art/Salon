@@ -893,6 +893,12 @@ ul { list-style: none; padding: 0; margin: 0; }
     width: 38px; height: 38px;
     background: rgba(255,255,255,0.08);
   }
+  .hero-swiper-prev:hover, .hero-swiper-next:hover {
+    transform: translateY(50%) scale(1.05);
+  }
+  .hero-swiper-prev:active, .hero-swiper-next:active {
+    transform: translateY(50%) scale(0.95);
+  }
   .hero-swiper-prev { left: 12px; }
   .hero-swiper-next { right: 12px; }
   
