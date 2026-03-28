@@ -990,7 +990,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   
   /* Restoring arrows on mobile - better positioned */
   .hero-swiper-prev, .hero-swiper-next { 
-    display: flex; top: auto; bottom: 140px;
+    display: flex; top: auto; bottom: 20px;
     transform: none;
     width: 38px; height: 38px;
     background: rgba(255,255,255,0.15);
@@ -1004,7 +1004,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   .hero-swiper-prev { left: 12px; }
   .hero-swiper-next { right: 12px; }
   
-  .hero-swiper-pagination { bottom: 85px; }
+  .hero-swiper-pagination { bottom: 65px; }
+  .hero-scroll-hint { display: none; }
   .about-img { height: 380px; }
   .about-exp-badge { top: 16px; right: 16px; padding: 16px 20px; }
   .exp-num { font-size: 28px; }
