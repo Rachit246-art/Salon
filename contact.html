@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -105,7 +105,7 @@
       <div class="section-header text-center" data-gsap="fade-up">
         <span class="section-tag">[ Get In Touch ]</span>
         <h2 class="section-title">Experience <span class="gradient-text">Lumière</span></h2>
-        <p class="section-sub">Book your premium consultation or reach out to our concierge for personalized assistance.
+        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam quis nostrud.
         </p>
       </div>
 
@@ -150,7 +150,7 @@
         </div>
 
         <div class="col-lg-7" data-gsap="fade-left">
-          <form class="contact-form-premium">
+          <form class="contact-form-premium" id="contactForm">
             <div class="row g-4">
               <div class="col-md-6">
                 <div class="form-floating-custom">
@@ -193,6 +193,19 @@
               </div>
             </div>
           </form>
+          <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              const name    = document.getElementById('name').value;
+              const email   = document.getElementById('email').value;
+              const phone   = document.getElementById('phone').value;
+              const service = document.getElementById('service').value;
+              const message = document.getElementById('message').value;
+              const subject = encodeURIComponent('Booking Enquiry – ' + service);
+              const body    = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nService: ' + service + '\n\nMessage:\n' + message);
+              window.location.href = 'mailto:hello@lumiere.com?subject=' + subject + '&body=' + body;
+            });
+          </script>
         </div>
       </div>
     </div>
