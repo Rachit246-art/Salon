@@ -6,6 +6,8 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('page-loader');
     if (loader) loader.classList.add('hidden');
+    const wa = document.querySelector('.chat-float-btn');
+    if (wa) { wa.style.opacity = '1'; wa.style.visibility = 'visible'; }
   }, 1000);
 });
 
