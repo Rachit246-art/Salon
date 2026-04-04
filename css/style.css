@@ -841,7 +841,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* ---- WHATSAPP FLOAT ---- */
 .chat-float-btn {
-  position: fixed; bottom: 32px; left: 32px;
+  position: fixed; bottom: 32px; right: 32px;
   width: 54px; height: 54px; background: #25d366;
   color: #fff !important; border-radius: 50%; border: none;
   font-size: 28px; display: flex; align-items: center; justify-content: center;
@@ -859,7 +859,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* ---- BACK TO TOP ---- */
 #back-to-top {
-  position: fixed; bottom: 32px; right: 32px;
+  position: fixed; bottom: 32px; left: 32px;
   width: 48px; height: 48px; background: var(--primary);
   color: var(--white); border: none; border-radius: 50%;
   font-size: 16px; cursor: none;
@@ -1016,13 +1016,13 @@ ul { list-style: none; padding: 0; margin: 0; }
   .cta-sub { margin-left: auto; margin-right: auto; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .footer-bottom-links { justify-content: center; }
-  #back-to-top { bottom: 20px; right: 20px; }
+  #back-to-top { bottom: 20px; left: 20px; }
   
   /* Pricing Mobile Edits */
   .pricing-badge { right: -42px; top: 22px; }
   .pricing-card { padding: 32px 24px; }
   
-  .chat-float-btn { bottom: 20px; left: 20px; width: 48px; height: 48px; font-size: 24px; }
+  .chat-float-btn { bottom: 20px; right: 20px; width: 48px; height: 48px; font-size: 24px; }
 }
 @media (max-width: 480px) {
   .hero-btns { flex-direction: column; gap: 12px; }
