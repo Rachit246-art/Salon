@@ -14,11 +14,11 @@ const hideLoader = () => {
 
 // Hide loader on window load with a small delay for visual polish
 window.addEventListener('load', () => {
-  setTimeout(hideLoader, 300);
+  setTimeout(hideLoader, 100);
 });
 
-// Safety fallback: hide loader after 4 seconds regardless of load state
-setTimeout(hideLoader, 4000);
+// Safety fallback: hide loader after 2 seconds regardless of load state (Target: Mobile Speed)
+setTimeout(hideLoader, 2000);
 
 
 /* ---- GSAP + ScrollTrigger ---- */
@@ -150,7 +150,7 @@ function initHeroSlider() {
   const heroSwiper = new Swiper('.hero-swiper', {
     loop: true,
     speed: 1200,   /* slower crossfade for premium feel */
-    autoplay: { delay: 6000, disableOnInteraction: false },
+    autoplay: { delay: window.innerWidth < 992 ? 3000 : 6000, disableOnInteraction: false },
     effect: 'fade',
     fadeEffect: { crossFade: true },
     navigation: {
