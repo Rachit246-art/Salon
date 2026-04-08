@@ -2,14 +2,24 @@
    LUMIÈRE BEAUTY SALON – script.js
    ============================================ */
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('page-loader');
-    if (loader) loader.classList.add('hidden');
+// Function to hide loader
+const hideLoader = () => {
+  const loader = document.getElementById('page-loader');
+  if (loader && !loader.classList.contains('hidden')) {
+    loader.classList.add('hidden');
     const wa = document.querySelector('.chat-float-btn');
     if (wa) { wa.style.opacity = '1'; wa.style.visibility = 'visible'; }
-  }, 1000);
+  }
+};
+
+// Hide loader on window load with a small delay for visual polish
+window.addEventListener('load', () => {
+  setTimeout(hideLoader, 300);
 });
+
+// Safety fallback: hide loader after 4 seconds regardless of load state
+setTimeout(hideLoader, 4000);
+
 
 /* ---- GSAP + ScrollTrigger ---- */
 gsap.registerPlugin(ScrollTrigger);
